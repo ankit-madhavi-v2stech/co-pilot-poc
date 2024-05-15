@@ -1,0 +1,12 @@
+/.metadata/
+*/target/*
+*/.classpath*
+*/.settings/*
+*/.project
+*/.deb
+*/test-output/*
+*/bin/*
+*/.factorypath*
+.sonarlint*
+.project*
+.settings*
