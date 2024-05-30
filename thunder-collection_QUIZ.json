@@ -1,0 +1,256 @@
+{
+    "clientName": "Thunder Client",
+    "collectionName": "QUIZ",
+    "collectionId": "735dad05-0713-48fa-9138-6d0816417800",
+    "dateExported": "2024-05-30T07:37:15.546Z",
+    "version": "1.2",
+    "folders": [
+        {
+            "_id": "b8aa0be3-3994-4627-bdf4-805b2724bca5",
+            "name": "Teacher",
+            "containerId": "",
+            "created": "2024-05-30T07:21:22.348Z",
+            "sortNum": 10000
+        },
+        {
+            "_id": "bd9e3bda-8419-4539-8482-8e4e4b7b74ef",
+            "name": "Student",
+            "containerId": "",
+            "created": "2024-05-30T07:30:01.935Z",
+            "sortNum": 20000
+        }
+    ],
+    "requests": [
+        {
+            "_id": "ef1cab36-ae95-424b-ac1d-72434aca9a61",
+            "colId": "735dad05-0713-48fa-9138-6d0816417800",
+            "containerId": "b8aa0be3-3994-4627-bdf4-805b2724bca5",
+            "name": "Download template",
+            "url": "http://localhost:8080/teacher/template/download",
+            "method": "GET",
+            "sortNum": 10000,
+            "created": "2024-05-30T07:18:14.043Z",
+            "modified": "2024-05-30T07:18:47.908Z",
+            "headers": []
+        },
+        {
+            "_id": "baf81a7c-85ad-4bb6-b222-d2c5e03fc0e8",
+            "colId": "735dad05-0713-48fa-9138-6d0816417800",
+            "containerId": "b8aa0be3-3994-4627-bdf4-805b2724bca5",
+            "name": "upload question",
+            "url": "http://localhost:8080/teacher/upload/{subject}",
+            "method": "POST",
+            "sortNum": 20000,
+            "created": "2024-05-30T07:19:07.743Z",
+            "modified": "2024-05-30T07:20:14.254Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "subject",
+                    "value": "",
+                    "isPath": true
+                }
+            ]
+        },
+        {
+            "_id": "85fbb6ad-4d79-4e8e-bbae-698809f24b0e",
+            "colId": "735dad05-0713-48fa-9138-6d0816417800",
+            "containerId": "b8aa0be3-3994-4627-bdf4-805b2724bca5",
+            "name": "Download uploaded questions",
+            "url": "http://localhost:8080/teacher/download/{subject}",
+            "method": "GET",
+            "sortNum": 30000,
+            "created": "2024-05-30T07:20:34.492Z",
+            "modified": "2024-05-30T07:21:11.727Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "subject",
+                    "value": "",
+                    "isPath": true
+                }
+            ]
+        },
+        {
+            "_id": "98581b81-0e2c-4bc6-8d39-47d1008e0031",
+            "colId": "735dad05-0713-48fa-9138-6d0816417800",
+            "containerId": "b8aa0be3-3994-4627-bdf4-805b2724bca5",
+            "name": "Create Question",
+            "url": "http://localhost:8080/teacher/question/{subject}",
+            "method": "POST",
+            "sortNum": 50000,
+            "created": "2024-05-30T07:23:31.999Z",
+            "modified": "2024-05-30T07:25:53.623Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "subject",
+                    "value": "",
+                    "isPath": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"question\" : \"test\",\n  \"answers\" : [\n    {\n      \"answer\" :\"test Ans\",\n      \"correctAnswer\" : \"Y\"\n    },\n    {\n      \"answer\" :\"test Ans2\",\n      \"correctAnswer\" : \"N\"\n    },\n    {\n      \"answer\" :\"test Ans3\",\n      \"correctAnswer\" : \"N\"\n    },\n    {\n      \"answer\" :\"test Ans4\",\n      \"correctAnswer\" : \"N\"\n    }]\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "936778ad-fc84-4ce4-83ab-ede04e44ab59",
+            "colId": "735dad05-0713-48fa-9138-6d0816417800",
+            "containerId": "b8aa0be3-3994-4627-bdf4-805b2724bca5",
+            "name": "Fetch all questions",
+            "url": "http://localhost:8080/teacher/question/{subject}",
+            "method": "GET",
+            "sortNum": 70000,
+            "created": "2024-05-30T07:26:13.815Z",
+            "modified": "2024-05-30T07:26:55.212Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "subject",
+                    "value": "",
+                    "isPath": true
+                }
+            ]
+        },
+        {
+            "_id": "dc34ca17-2792-4ec8-92fd-f201f8fe81b6",
+            "colId": "735dad05-0713-48fa-9138-6d0816417800",
+            "containerId": "b8aa0be3-3994-4627-bdf4-805b2724bca5",
+            "name": "Update Question",
+            "url": "http://localhost:8080/teacher/question/{subject}/{questionId}",
+            "method": "PUT",
+            "sortNum": 80000,
+            "created": "2024-05-30T07:26:47.469Z",
+            "modified": "2024-05-30T07:27:43.786Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "subject",
+                    "value": "",
+                    "isPath": true
+                },
+                {
+                    "name": "questionId",
+                    "value": "",
+                    "isPath": true
+                }
+            ],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"question\" : \"test\",\n  \"answers\" : [\n    {\n      \"answer\" :\"test Ans\",\n      \"correctAnswer\" : \"Y\"\n    },\n    {\n      \"answer\" :\"test Ans2\",\n      \"correctAnswer\" : \"N\"\n    },\n    {\n      \"answer\" :\"test Ans3\",\n      \"correctAnswer\" : \"N\"\n    },\n    {\n      \"answer\" :\"test Ans4\",\n      \"correctAnswer\" : \"N\"\n    }]\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "5a73d9fd-cb01-498e-9ed1-1ef2c71a1885",
+            "colId": "735dad05-0713-48fa-9138-6d0816417800",
+            "containerId": "b8aa0be3-3994-4627-bdf4-805b2724bca5",
+            "name": "Delete Question",
+            "url": "http://localhost:8080/teacher/question/{subject}/{questionId}",
+            "method": "DELETE",
+            "sortNum": 90000,
+            "created": "2024-05-30T07:28:40.102Z",
+            "modified": "2024-05-30T07:29:13.909Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "subject",
+                    "value": "",
+                    "isPath": true
+                },
+                {
+                    "name": "questionId",
+                    "value": "",
+                    "isPath": true
+                }
+            ]
+        },
+        {
+            "_id": "2bc2400b-4f68-4480-acb1-00fb4b8d3675",
+            "colId": "735dad05-0713-48fa-9138-6d0816417800",
+            "containerId": "b8aa0be3-3994-4627-bdf4-805b2724bca5",
+            "name": "Fetch Results",
+            "url": "http://localhost:8080/teacher/result/{pageNumber}/{pageSize}?studentName=Ram",
+            "method": "GET",
+            "sortNum": 100000,
+            "created": "2024-05-30T07:29:07.510Z",
+            "modified": "2024-05-30T07:29:51.559Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "pageNumber",
+                    "value": "",
+                    "isPath": true
+                },
+                {
+                    "name": "pageSize",
+                    "value": "",
+                    "isPath": true
+                },
+                {
+                    "name": "studentName",
+                    "value": "Ram",
+                    "isPath": false
+                }
+            ]
+        },
+        {
+            "_id": "f78f9fef-a1da-4b76-b45a-850861d851f7",
+            "colId": "735dad05-0713-48fa-9138-6d0816417800",
+            "containerId": "bd9e3bda-8419-4539-8482-8e4e4b7b74ef",
+            "name": "Fetch Exam question",
+            "url": "http://localhost:8080/student/exam/{subjectName}",
+            "method": "GET",
+            "sortNum": 110000,
+            "created": "2024-05-30T07:30:22.427Z",
+            "modified": "2024-05-30T07:31:31.825Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "subjectName",
+                    "value": "",
+                    "isPath": true
+                }
+            ]
+        },
+        {
+            "_id": "66f3d9a0-6d62-4b35-8b41-195b067f7124",
+            "colId": "735dad05-0713-48fa-9138-6d0816417800",
+            "containerId": "bd9e3bda-8419-4539-8482-8e4e4b7b74ef",
+            "name": "Submit Test",
+            "url": "http://localhost:8080/student/submit-test",
+            "method": "POST",
+            "sortNum": 120000,
+            "created": "2024-05-30T07:31:54.098Z",
+            "modified": "2024-05-30T07:33:14.173Z",
+            "headers": [],
+            "body": {
+                "type": "json",
+                "raw": "{\n  \"userId\" : 1,\n  \"questions\" : [\n  {\n    \"questionId\": 8,\n    \"question\": \"Q5\",\n    \"answers\": [\n      {\n        \"answer\": \"H1\",\n        \"correctAnswer\": \"Y\"\n      },\n      {\n        \"answer\": \"H2\",\n        \"correctAnswer\": null\n      },\n      {\n        \"answer\": \"H3\",\n        \"correctAnswer\": null\n      },\n      {\n        \"answer\": \"H4\",\n        \"correctAnswer\": null\n      }\n    ]\n  },\n  {\n    \"questionId\": 10,\n    \"question\": \"Q7\",\n    \"answers\": [\n      {\n        \"answer\": \"J1\",\n        \"correctAnswer\": null\n      },\n      {\n        \"answer\": \"J2\",\n        \"correctAnswer\": null\n      },\n      {\n        \"answer\": \"J3\",\n        \"correctAnswer\": null\n      },\n      {\n        \"answer\": \"J4\",\n        \"correctAnswer\": \"Y\"\n      }\n    ]\n  },\n  {\n    \"questionId\": 2,\n    \"question\": \"Q2\",\n    \"answers\": [\n      {\n        \"answer\": \"B1\",\n        \"correctAnswer\": null\n      },\n      {\n        \"answer\": \"B2\",\n        \"correctAnswer\": null\n      },\n      {\n        \"answer\": \"B3\",\n        \"correctAnswer\": null\n      },\n      {\n        \"answer\": \"B4\",\n        \"correctAnswer\": \"Y\"\n      }\n    ]\n  },\n  {\n    \"questionId\": 3,\n    \"question\": \"Q24\",\n    \"answers\": [\n      {\n        \"answer\": \"C1\",\n        \"correctAnswer\": null\n      },\n      {\n        \"answer\": \"C2\",\n        \"correctAnswer\": null\n      },\n      {\n        \"answer\": \"C3\",\n        \"correctAnswer\": \"Y\"\n      },\n      {\n        \"answer\": \"C4\",\n        \"correctAnswer\": null\n      }\n    ]\n  },\n  {\n    \"questionId\": 7,\n    \"question\": \"Q4\",\n    \"answers\": [\n      {\n        \"answer\": \"G1\",\n        \"correctAnswer\": null\n      },\n      {\n        \"answer\": \"G2\",\n        \"correctAnswer\": \"Y\"\n      },\n      {\n        \"answer\": \"G3\",\n        \"correctAnswer\": null\n      },\n      {\n        \"answer\": \"G4\",\n        \"correctAnswer\": null\n      }\n    ]\n  }\n]\n}",
+                "form": []
+            }
+        },
+        {
+            "_id": "8de8ec9e-5a98-4bf5-ba92-e52b2485687a",
+            "colId": "735dad05-0713-48fa-9138-6d0816417800",
+            "containerId": "bd9e3bda-8419-4539-8482-8e4e4b7b74ef",
+            "name": "Fetch results",
+            "url": "http://localhost:8080/student/result/{userId}",
+            "method": "GET",
+            "sortNum": 140000,
+            "created": "2024-05-30T07:33:51.653Z",
+            "modified": "2024-05-30T07:34:16.031Z",
+            "headers": [],
+            "params": [
+                {
+                    "name": "userId",
+                    "value": "",
+                    "isPath": true
+                }
+            ]
+        }
+    ],
+    "ref": "FmTi2_7J7d2H09Kdab-z7JcagRDJHQrDRMbPzf7Cg87pw2dpj7W3e9xcfqXFATZP2--uenNVINS41YHGsj2Nsg"
+}
