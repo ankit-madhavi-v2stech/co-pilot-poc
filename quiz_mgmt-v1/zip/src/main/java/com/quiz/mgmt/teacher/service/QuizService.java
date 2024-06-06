@@ -92,6 +92,7 @@ public class QuizService {
         final QuizQuestion quizQuestion = new QuizQuestion();
         quizQuestion.setQuestion(questionModel.getQuestion());
         quizQuestion.setSubject(subject);
+        quizQuestion.setCreatedAt(new Date());
 
         List<Answer> answers = questionModel.getAnswers().stream()
                 .map(answerModel -> {
@@ -99,6 +100,7 @@ public class QuizService {
                     answer.setAnswer(answerModel.getAnswer());
                     answer.setCorrect(answerModel.getCorrectAnswer() == 'Y');
                     answer.setQuestion(quizQuestion);
+                    answer.setCreatedAt(new Date());
                     return answer;
                 })
                 .collect(Collectors.toList());
